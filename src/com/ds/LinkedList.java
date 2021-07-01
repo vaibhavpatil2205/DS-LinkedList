@@ -1,6 +1,5 @@
 package com.ds;
-
-public class Linkedlist{
+public class Linkedlist {
 	Node head;
 	
 	 class Node {
@@ -13,7 +12,7 @@ public class Linkedlist{
 		 }
 	 }
 	 
-	 	// method of inserting data
+	 	// method of appending data
 	 	public void insert (int data) {			
 			Node newNode = new Node(data);
 			if (head == null) {

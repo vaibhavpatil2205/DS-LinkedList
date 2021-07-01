@@ -6,7 +6,7 @@ public class Main {
 		linkedlist.push(56);
 		linkedlist.push(30);
 		linkedlist.push(70);
-		System.out.println("Linklist:");
+		
 		linkedlist.print();	
 		}
 }
