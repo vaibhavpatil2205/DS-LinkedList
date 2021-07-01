@@ -1,4 +1,5 @@
 package com.ds;
+
 public class Linkedlist {
 	Node head;
 	
@@ -12,8 +13,8 @@ public class Linkedlist {
 		 }
 	 }
 	 
-	 	// method of appending data
-	 	public void insert (int data) {			
+	 	// method of inserting data
+	 	public Node insert (int data) {			
 			Node newNode = new Node(data);
 			if (head == null) {
 				head = newNode;
@@ -24,6 +25,7 @@ public class Linkedlist {
 				}
 				temp.next = newNode;
 			}
+			return newNode;
 		}
 	
 		//method to push
@@ -37,10 +39,24 @@ public class Linkedlist {
 		public void print() {
 			Node temp = head;
 			while(temp!=null) {
-				System.out.print(temp.data+"->");
+				System.out.println(temp.data+"->");
 				temp = temp.next;
 			}
-			System.out.println();
+		
 		}
 
+		// method to insert after a node
+		public void insertAfter(Node prevNode, int value) {
+
+			if (prevNode == null) {
+			System.out.println("Prev Node should not be null");
+			return;
+			}
+			
+			Node newNode = new Node(value);
+			newNode.next = prevNode.next;
+			prevNode.next = newNode;
+
+			
+			}
 }
