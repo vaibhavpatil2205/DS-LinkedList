@@ -39,10 +39,10 @@ public class Linkedlist {
 		public void print() {
 			Node temp = head;
 			while(temp!=null) {
-				System.out.println(temp.data+"->");
+				System.out.print(temp.data+"->");
 				temp = temp.next;
 			}
-		
+		System.out.println();
 		}
 
 		// method to insert after a node
@@ -56,7 +56,15 @@ public class Linkedlist {
 			Node newNode = new Node(value);
 			newNode.next = prevNode.next;
 			prevNode.next = newNode;
+			}
 
-			
+		public int pop() {
+			int popData = 0;
+			if (head == null) {
+			System.out.println("Stack Over flow");
+			}
+			popData = head.data;
+			head = head.next;
+			return popData;
 			}
 }
